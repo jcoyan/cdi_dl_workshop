@@ -1,0 +1,18 @@
+INFO:tensorflow:Looking for images in 'beach'
+INFO:tensorflow:Looking for images in 'buildings'
+INFO:tensorflow:Looking for images in 'cliff'
+INFO:tensorflow:Looking for images in '.ipynb_checkpoints'
+Traceback (most recent call last):
+  File "retrain.py", line 1333, in <module>
+    tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/platform/app.py", line 126, in run
+    _sys.exit(main(argv))
+  File "retrain.py", line 1000, in main
+    FLAGS.validation_percentage)
+  File "retrain.py", line 185, in create_image_lists
+    file_list.extend(tf.gfile.Glob(file_glob))
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/lib/io/file_io.py", line 337, in get_matching_files
+    for single_filename in filename
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/errors_impl.py", line 519, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.NotFoundError: ccr_train/tile_224/.ipynb_checkpoints; No such file or directory
